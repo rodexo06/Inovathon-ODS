@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BeeSafe.Model
+namespace BeeSafe.Models
 {
     public class BeeSafeContext : DbContext
     {
