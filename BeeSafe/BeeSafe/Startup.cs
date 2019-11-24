@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BeeSafe.Models;
 using BeeSafe.Model;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace BeeSafe
 {
