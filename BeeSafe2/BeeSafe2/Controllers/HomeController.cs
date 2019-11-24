@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using BeeSafe.Models;
+using BeeSafe2.Models;
 
-namespace BeeSafe.Controllers
+namespace BeeSafe2.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,7 +18,7 @@ namespace BeeSafe.Controllers
             _logger = logger;
         }
 
-        public IActionResult Home()
+        public IActionResult Index()
         {
             return View();
         }

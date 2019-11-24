@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BeeSafe.Models;
+using Microsoft.EntityFrameworkCore;
 using BeeSafe.Model;
 
 namespace BeeSafe
@@ -29,6 +29,13 @@ namespace BeeSafe
             services.AddControllers();
             services.AddScoped<Perfil>();
             string conncetionstring = @"Data Source=DESKTOP-J2RA9IJ;Initial Catalog=BeeSafe;Integrated Security=True;Pooling=False";
+            /*
+ * Session - Configuração
+ */
+            services.AddDbContext<BeeSafeContext>(option =>
+            {
+                option.UseSqlServer(conncetionstring);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
